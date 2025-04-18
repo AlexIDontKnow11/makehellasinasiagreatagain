@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Website</title>
+    <style>
+      
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1c1c1c;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+      
+        .main-content {
+            display: none;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #00bcd4;
+        }
+
+        .btn {
+            background-color: #00bcd4;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0097a7;
+        }
+
+        .discord-img {
+            width: 80%;
+            max-width: 300px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .announcement-btn {
+            margin-top: 20px;
+            background-color: #ff4081;
+        }
+
+        .announcement-btn:hover {
+            background-color: #f50057;
+        }
+
+        .announcement {
+            background-color: #333;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            display: none;
+        }
+
+    
+        .welcome-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .welcome-screen h2 {
+            font-size: 2rem;
+            color: #00bcd4;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        .open-btn {
+            background-color: #ff4081;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .open-btn:hover {
+            background-color: #f50057;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="welcome-screen" id="welcome-screen">
+        <h2>Welcome to our official website!</h2>
+        <button class="open-btn" onclick="openPage()">Open</button>
+    </div>
+
+
+    <div class="main-content" id="main-content">
+        <h1>Join our Discord Server!</h1>
+
+        <p>Join our discord server to see our country to glory in pixelplanet.fun and kick out the Liberland fake people.</p>
+
+        <a href="https://discord.gg/Ee5CcmaajU" target="_blank" class="btn">Discord Server</a>
+
+        <button class="btn announcement-btn" onclick="showAnnouncement()">Announcements</button>
+
+        <div class="announcement" id="announcement">
+            <p>No announcements available right now.</p>
+        </div>
+
+        <img src="https://cdn.discordapp.com/attachments/1309861320220217365/1362822939463913643/image.png?ex=6803cb44&is=680279c4&hm=091ca2bea2d97ca41d7bd96700627048ee07514a1a43788898d82694565882f0&" alt="Image 1" class="discord-img">
+        <img src="https://cdn.discordapp.com/attachments/1309861320220217365/1362822771444420749/image.png?ex=6803cb1c&is=6802799c&hm=8e579a52b09914f7222d0ed9bbf0806820579e08849619ed473245aee13bc11d&" alt="Image 2" class="discord-img">
+    </div>
+
+    <script>
+        function openPage() {
+ 
+            document.getElementById("welcome-screen").style.display = "none";
+            document.getElementById("main-content").style.display = "block";
+        }
+
+        function showAnnouncement() {
+            var announcement = document.getElementById("announcement");
+            announcement.style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
